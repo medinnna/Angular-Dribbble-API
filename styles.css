@@ -1,0 +1,79 @@
+body {
+  background: rgba(0, 0, 0, .05);
+  font-family: "Slabo 27px", sans-serif;
+  margin-bottom: 100px;
+}
+
+ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-info {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.profile-info .title {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold
+}
+
+.profile-info .description {
+
+}
+
+.profile-info .profile-img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, .2);
+}
+
+.shots {
+  font-size: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shots li {
+  background: white;
+  width: 30%;
+  margin: 0 calc(10% / 6);
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  padding: 15px;
+  padding-bottom: 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all .2s ease-in-out;
+}
+
+.shots li:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.shots img {
+  max-width: 100%
+}
+
+.shot-info {
+  margin-top: 15px;
+}
+
+.shot-info .title {
+  float: left;
+  max-width: 60%;
+}
+
+.shot-info .date {
+  float: right;
+  max-width: 50%;
+  font-weight: bold;
+}

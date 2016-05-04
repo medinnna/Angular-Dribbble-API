@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="DribbbleApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Dribbble API Angular</title>
+    <link rel="stylesheet" href="styles.css" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="module.js" charset="utf-8"></script>
+    <script src="functions.js"></script>
+  </head>
+  <body>
+    <div class="profile-info" ng-controller="ProfileController">
+      <div class="profile-img" style="background-image: url({{user_profile.avatar_url}})"></div>
+
+      <p class="title">{{user_profile.name}}</p>
+      <p class="description">{{user_profile.bio}}</p>
+    </div>
+
+    <ul class="shots" ng-controller="ShotsController">
+      <li ng-repeat="shot in shots">
+        <a ng-href="{{shot.html_url}}" target="_blank">
+          <img ng-src="{{shot.images.hidpi}}" alt="">
+        </a>
+        <div class="shot-info">
+          <p class="title">{{shot.title}}</p>
+          <p class="date">{{shot.created_at | date: "d MMM, y"}}</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
